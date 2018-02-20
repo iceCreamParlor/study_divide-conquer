@@ -1,0 +1,25 @@
+분할 정복(Divide & Conquer)
+- 문제를 2개로 나누고, 작은 부분 문제를 나누어서 큰 문제를 해결한다.
+
+* Binary Search
+정렬되어 있는 리스트에서 값을 빨리 찾는 방법
+logN의 시간 복잡도를 소모한다. (2로 나누어 가는 연산이기 때문에)
+
+while(left <= right){
+	int mid = (left + right)/2;
+	if(a[mid]==x){
+		position = mid; break;
+	}
+	else if(a[mid] > x){
+		right = mid-1;
+	}
+	else{
+		left = mid+1;
+	}
+}
+
+* Merge Sort
+왼쪽 N/2개, 오른쪽 N/2개를 정렬한 후, 이를 Merge 한다.
+나누는 부분에서는 O(NlogN)
+
+* 문제를 어떻게 나누어야 할 지 정하고, 어떻게 합쳐야 될 지 정하는게 중요하다.
