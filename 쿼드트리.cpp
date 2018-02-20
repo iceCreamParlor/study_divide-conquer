@@ -15,10 +15,8 @@ bool same(int row, int col, int size){
 	return true;
 }
 void compute(int row, int col, int num){
-	
 	if(num==1) cout << map[row][col];
 	else{
-		
 		if(same(row, col, num)){
 			cout<<map[row][col];
 		}
